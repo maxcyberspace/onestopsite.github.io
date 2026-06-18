@@ -16,6 +16,8 @@ const {
 // Current path for active navigation styling
 const currentPath = Astro.url.pathname;
 const cleanPath = currentPath.endsWith('/') && currentPath.length > 1 ? currentPath.slice(0, -1) : currentPath;
+
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <!doctype html>
@@ -23,8 +25,11 @@ const cleanPath = currentPath.endsWith('/') && currentPath.length > 1 ? currentP
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="shortcut icon" href={`${base}favicon.ico`} />
+    <link rel="apple-touch-icon" sizes="180x180" href={`${base}apple-touch-icon.png`} />
+    <link rel="icon" type="image/png" sizes="96x96" href={`${base}favicon-96x96.png`} />
+    <link rel="manifest" href={`${base}site.webmanifest`} />
     <meta name="generator" content={Astro.generator} />
     
     <!-- SEO Meta Tags -->
@@ -37,7 +42,7 @@ const cleanPath = currentPath.endsWith('/') && currentPath.length > 1 ? currentP
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image" content={`${base}og-image.png`} />
     <meta property="og:url" content={Astro.url.href} />
     
     <!-- Twitter -->
@@ -58,12 +63,9 @@ const cleanPath = currentPath.endsWith('/') && currentPath.length > 1 ? currentP
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="flex h-16 items-center justify-between">
             <div class="flex items-center gap-8">
-              <a href="/" class="flex items-center gap-2.5 transition-opacity hover:opacity-90">
-                <div class="flex h-7 w-7 items-center justify-center rounded border border-neutral-800 bg-neutral-950 font-mono text-xs font-black text-white shadow-inner select-none" style="image-rendering: pixelated;">
-                  <span class="text-xs text-neutral-400 font-sans font-bold">88</span>
-                </div>
+              <a href={base} class="flex items-center gap-2.5 transition-opacity hover:opacity-90">
                 <span class="text-sm font-bold tracking-tight text-white font-sans">
-                  OneStopSite<span class="text-neutral-500 font-normal font-mono text-[10px] ml-1.5 border border-neutral-800 px-1 py-0.5 rounded">v1.0</span>
+                  OneStopSite
                 </span>
               </a>
               <nav class="hidden md:flex items-center gap-3.5 lg:gap-5 xl:gap-6 text-xs lg:text-sm">
