@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="About Us | OneStopSite 88x31 Button Maker"
+  description="Learn about OneStopSite and our mission to support the indie web, Neocities webmasters, and vintage web enthusiasts with modern canvas tools."
+>
+  <div class="max-w-4xl mx-auto pt-0 pb-12 px-4">
+    <!-- Centered Page Header -->
+    <div class="border-b border-neutral-800 pb-10 mb-12 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-850 bg-neutral-950 text-xs text-emerald-400 mb-4 font-mono select-none">
+        <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>OUR MISSION</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-black text-white mb-4 tracking-tight font-sans">About OneStopSite</h1>
+      <p class="text-neutral-300 text-xl leading-relaxed max-w-2xl mx-auto">
+        We are a collective of developers, retro web enthusiasts, and digital archivists dedicated to reviving the creative freedom of the early personal internet.
+      </p>
+    </div>
+
+    <!-- Features Grid / Story section (Perfectly centered & spaced box container) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+      <!-- Card #01 -->
+      <div class="border border-neutral-800 bg-neutral-900/50 rounded-xl p-8 hover:border-neutral-700 hover:scale-[1.01] transition-all duration-300 flex flex-col h-full shadow-xl">
+        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+          <span class="text-xs px-2.5 py-1 bg-emerald-950/80 border border-emerald-800 text-emerald-400 font-mono rounded-md shadow-inner select-none font-bold">#01</span>
+          <span>Keep the Indie Web Alive</span>
+        </h3>
+        <p class="text-neutral-300 text-[15px] leading-relaxed flex-grow">
+          The early web was built by hand, page by page. Personal sites on hosting services like GeoCities, Angelfire, and Tripod were canvases for raw personal expression. 88x31 badges were the visual handshakes connecting these independent nodes. We build tools that make it easy for new creators on Neocities to design custom badges and build links.
+        </p>
+      </div>
+
+      <!-- Card #02 -->
+      <div class="border border-neutral-800 bg-neutral-900/50 rounded-xl p-8 hover:border-neutral-700 hover:scale-[1.01] transition-all duration-300 flex flex-col h-full shadow-xl">
+        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+          <span class="text-xs px-2.5 py-1 bg-emerald-950/80 border border-emerald-800 text-emerald-400 font-mono rounded-md shadow-inner select-none font-bold">#02</span>
+          <span>Modern Figma-Grade Workflows</span>
+        </h3>
+        <p class="text-neutral-300 text-[15px] leading-relaxed flex-grow">
+          Traditional retro button makers are either static, buggy, or rely on outdated server rendering. We engineered OneStopSite to give webmasters modern, client-side vector tools. With multi-frame GIF keyframe timelines, pixel outline controls, shadows, and crisp upscale exports, you get maximum creative freedom directly in your browser.
+        </p>
+      </div>
+    </div>
+
+    <!-- Centered block container for secondary stories -->
+    <div class="space-y-12 text-neutral-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto border-t border-neutral-900 pt-12">
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight text-center md:text-left">Our Journey</h2>
+        <p class="text-justify md:text-left">
+          It started with a simple problem: we wanted to create custom 88x31 buttons for our personal web projects, but the tools available on the web were either defunct, cluttered with ads, or produced blurry results. We realized that web 1.0 lovers deserved a premium, modern design suite tailored to retro dimensions.
+        </p>
+        <p class="text-justify md:text-left">
+          OneStopSite was built using modern web development standards (Astro, Tailwind CSS, and HTML5 Canvas APIs) to compile high-resolution, LZW-encoded GIF streams directly inside the browser. By combining high-dpi pixel art with smooth vector controls, we created a tool that is fast, secure, and extremely powerful.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight text-center md:text-left">Why We Support Neocities & Geocities Rebuilds</h2>
+        <p class="text-justify md:text-left">
+          In a world dominated by uniform social media feeds, personal web spaces represent digital independence. Platforms like <strong class="text-white font-semibold">Neocities</strong> have proved that static web design is not just a relic of the past, but a thriving culture of modern creators. We are committed to releasing and updating templates, hosting open-source tools, and serving the retro-web community.
+        </p>
+      </section>
+
+      <!-- Centered Logo Exchange Section -->
+      <section class="border-t border-neutral-900 pt-10 mt-12 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <h3 class="text-xl font-bold text-white mb-1">Want to exchange links?</h3>
+          <p class="text-neutral-400 text-sm">Grab our official badge and link back to OneStopSite!</p>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row items-center gap-4 bg-neutral-950 p-4 rounded-xl border border-neutral-900 w-full md:w-auto">
+          <!-- Logo Badge Simulated -->
+          <div class="w-[88px] h-[31px] bg-black border border-neutral-800 relative overflow-hidden select-none flex items-center justify-center shrink-0 shadow-md">
+            <div class="absolute inset-0 bg-gradient-to-r from-emerald-950/40 to-blue-950/40"></div>
+            <span class="font-sans font-bold text-[9px] text-white tracking-tight relative z-10 font-bold">OneStopSite</span>
+          </div>
+          <div class="text-[10px] font-mono text-neutral-400 overflow-x-auto select-all max-w-full md:max-w-xs scrollbar-thin py-1">
+            <code>&lt;a href="https://onestopsite.com"&gt;&lt;img src="https://onestopsite.com/button.png" width="88" height="31" alt="OneStopSite"&gt;&lt;/a&gt;</code>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const presets = [
+  {
+    id: "win95",
+    name: "Classic Windows 95",
+    tags: ["Retro", "Classic", "Windows"],
+    description: "Solid gray outset border imitating Windows 95 desktop icons. Perfect for retro web purists.",
+    previewStyle: "background: #c0c0c0; border: 2px solid; border-color: #ffffff #808080 #808080 #ffffff;",
+    previewHtml: '<div class="w-full h-full flex items-center justify-between px-2 font-mono text-[9px] text-black font-bold select-none"><span class="border border-neutral-400 px-0.5 bg-neutral-300">W95</span><span>SITE</span></div>'
+  },
+  {
+    id: "cyberpunk",
+    name: "Cyberpunk Neon",
+    tags: ["Futuristic", "Neon", "Animated"],
+    description: "A dark gradient button with neon text glow, cyber grids, and diagonal scanlines overlay.",
+    previewStyle: "background: linear-gradient(135deg, #120024 0%, #06000c 100%);",
+    previewHtml: '<div class="w-full h-full flex items-center justify-center relative"><div class="absolute inset-0 opacity-15" style="background-image: linear-gradient(to right, #00f0ff 1px, transparent 1px), linear-gradient(to bottom, #00f0ff 1px, transparent 1px); background-size: 6px 6px;"></div><span class="font-[\'Silkscreen\'] text-[8px] text-[#ff0055] tracking-widest font-bold z-10 drop-shadow-[0_0_2px_#ff0055]">CYBER</span></div>'
+  },
+  {
+    id: "construction",
+    name: "Under Construction",
+    tags: ["Web 1.0", "Flashing", "Classic"],
+    description: "Yellow and black warning stripes with flashing alert text. The classic Web 1.0 hallmark.",
+    previewStyle: "background: #facc15;",
+    previewHtml: '<div class="w-full h-full flex items-center justify-center relative overflow-hidden"><div class="absolute inset-0 opacity-10 pointer-events-none" style="background: repeating-linear-gradient(45deg, #000, #000 4px, transparent 4px, transparent 8px);"></div><span class="font-[\'Press_Start_2P\'] text-[6px] text-black font-bold uppercase tracking-tighter bg-white px-1 py-0.5 border border-black z-10 animate-pulse">UNDER CONST</span></div>'
+  },
+  {
+    id: "starry",
+    name: "Pixel Starry Night",
+    tags: ["Art", "Pixel", "Calm"],
+    description: "Dark blue sky with tiny yellow pixel stars and a crescent moon. Looks beautiful with white text.",
+    previewStyle: "background: linear-gradient(180deg, #020617 0%, #0f172a 100%);",
+    previewHtml: '<div class="w-full h-full flex items-center justify-between px-2 relative"><span class="text-[9px] text-yellow-300">✦</span><span class="font-[\'Silkscreen\'] text-[8px] text-white z-10 drop-shadow-md">STARRY</span><span class="text-[9px] text-yellow-200">☾</span></div>'
+  },
+  {
+    id: "minimalist",
+    name: "Pure Notepad",
+    tags: ["Minimalist", "Developer", "Clean"],
+    description: "Pure white background with a thin black border. Ideal for coders and minimalist designers.",
+    previewStyle: "background: #ffffff; border: 1px solid #000000;",
+    previewHtml: '<div class="w-full h-full flex items-center justify-center font-mono text-[8px] text-black tracking-tight font-bold font-sans">MADE WITH NOTEPAD</div>'
+  },
+  {
+    id: "glass",
+    name: "Vercel Glossy",
+    tags: ["Modern", "Glossy", "Web 2.0"],
+    description: "Vibrant violet background with a clean glass overlay reflection. Modern design inside a retro canvas.",
+    previewStyle: "background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);",
+    previewHtml: '<div class="w-full h-full flex items-center justify-center relative"><div class="absolute top-0 left-0 w-full h-[50%] bg-white/10 rounded-b-[3px]"></div><span class="font-sans font-bold text-[8px] text-white tracking-widest drop-shadow">WEB3.0</span></div>'
+  }
+];
+---
+
+<Layout 
+  title="Free 88x31 Button Presets & Custom Templates | OneStopSite"
+  description="Browse our library of free retro 88x31 button presets. Customize Windows 95, cyberpunk, neon, under construction, and minimal templates instantly in our web editor."
+>
+  <div class="pt-0 pb-6">
+    <div class="border-b border-neutral-900 pb-6 mb-10">
+      <div class="text-xs text-neutral-500 font-mono uppercase tracking-wider mb-2">Workspace Presets</div>
+      <h1 class="text-4xl font-black text-white tracking-tight">88x31 Button Templates</h1>
+      <p class="text-neutral-400 mt-2">Select a theme to load directly in the editor. All layers, shapes, texts, and timelines are fully customizable.</p>
+    </div>
+
+    <!-- Filter grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {presets.map((preset) => (
+        <div class="flex flex-col justify-between rounded-xl border border-neutral-900 bg-neutral-950/20 p-5 hover:border-neutral-800 transition-all">
+          <div>
+            <!-- Button Container with retro spacing -->
+            <div class="flex items-center justify-center bg-black/60 rounded border border-neutral-900 h-16 w-full mb-6">
+              <div 
+                class="w-[88px] h-[31px] relative overflow-hidden flex items-center justify-center" 
+                style={preset.previewStyle}
+                set:html={preset.previewHtml}
+              />
+            </div>
+            
+            <div class="flex flex-wrap gap-1.5 mb-3">
+              {preset.tags.map((tag) => (
+                <span class="font-mono text-[9px] uppercase tracking-wider text-neutral-500 px-1.5 py-0.5 rounded border border-neutral-900 bg-neutral-950">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            
+            <h2 class="text-lg font-bold text-white mb-2">{preset.name}</h2>
+            <p class="text-xs text-neutral-400 mb-6 leading-relaxed">{preset.description}</p>
+          </div>
+          
+          <a 
+            href={`/editor?preset=${preset.id}`}
+            class="w-full inline-flex items-center justify-center rounded-md bg-neutral-900 px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-neutral-800 border border-neutral-800 hover:border-neutral-700"
+          >
+            Customize Template
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,526 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="88x31 Button Editor - Ultimate Neocities & Geocities Button Maker"
+  description="Create, edit, and animate vintage 88x31 buttons with the ultimate 88x31 button editor. Perfect for Neocities templates, Geocities websites, blinkies, and indie web design."
+>
+  <!-- Hero Section -->
+  <section class="relative pt-0 pb-20 overflow-hidden">
+    <!-- Background glow -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-neutral-900/40 rounded-full blur-[120px] pointer-events-none"></div>
+    
+    <div class="text-center relative z-10 max-w-2xl mx-auto px-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-900 bg-neutral-950 text-xs text-neutral-400 mb-6 font-mono select-none">
+        <span class="flex h-2 w-2 rounded-full bg-emerald-500"></span>
+        <span>The New Standard for Retro Buttons</span>
+      </div>
+      
+      <h1 class="text-5xl md:text-7xl font-black tracking-tight text-white mb-5 font-sans leading-[1.1]">
+        Design retro <span class="bg-gradient-to-r from-neutral-200 via-neutral-100 to-neutral-400 bg-clip-text text-transparent">88x31 buttons</span> with Figma-grade controls.
+      </h1>
+      
+      <p class="text-lg md:text-xl text-neutral-300 mb-8 max-w-xl mx-auto leading-relaxed">
+        Stop using blurry, feature-limited generators. OneStopSite is a lightweight, ultra-fast canvas-based editor with frame animations, layers, custom stroke text, and crystal-clear GIF exports.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a 
+          href="/editor" 
+          class="w-full sm:w-auto inline-flex items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-semibold text-black transition-all hover:bg-neutral-200 hover:scale-[1.02] active:scale-[0.98]"
+        >
+          Open Editor
+        </a>
+        <a 
+          href="/templates" 
+          class="w-full sm:w-auto inline-flex items-center justify-center rounded-md border border-neutral-800 bg-neutral-950 px-5 py-3 text-sm font-semibold text-neutral-300 transition-all hover:bg-neutral-900 hover:text-white"
+        >
+          Browse Templates
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Showcase -->
+  <section class="py-12 border-y border-neutral-950 bg-neutral-950/40 rounded-xl px-6 mb-20">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-xl font-bold text-neutral-100 mb-2">Designed on OneStopSite</h2>
+        <p class="text-xs text-neutral-500 font-mono uppercase tracking-wider">Mouseover buttons to preview animations</p>
+      </div>
+      
+      <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+        <!-- Showcase Button 1 -->
+        <div class="flex flex-col items-center gap-2 group">
+          <div class="relative p-1 bg-neutral-900 rounded border border-neutral-800 transition-all group-hover:border-neutral-700">
+            <!-- Simulated 88x31 button -->
+            <div class="w-[88px] h-[31px] bg-black border border-neutral-700 relative overflow-hidden select-none flex items-center justify-center">
+              <div class="absolute inset-0 bg-linear-to-b from-blue-900/60 to-purple-950/80"></div>
+              <div class="absolute inset-0 bg-[radial-gradient(circle,transparent_40%,rgba(0,0,0,0.6))]"></div>
+              <!-- Diagonal Scanlines -->
+              <div class="absolute inset-0 opacity-20 pointer-events-none" style="background: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 1px, transparent 4px);"></div>
+              <span class="font-mono text-[9px] text-white tracking-widest relative z-10 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)] font-bold animate-pulse">CYBER</span>
+            </div>
+          </div>
+          <span class="text-[10px] font-mono text-neutral-500">Retro Neon</span>
+        </div>
+
+        <!-- Showcase Button 2 -->
+        <div class="flex flex-col items-center gap-2 group">
+          <div class="relative p-1 bg-neutral-900 rounded border border-neutral-800 transition-all group-hover:border-neutral-700">
+            <div class="w-[88px] h-[31px] bg-neutral-200 border-2 border-neutral-400 relative overflow-hidden select-none flex items-center justify-between px-1.5" style="border-style: outset;">
+              <div class="flex items-center gap-1">
+                <span class="w-3 h-3 bg-red-600 rounded-xs flex items-center justify-center font-bold text-white text-[8px] font-mono leading-none">95</span>
+              </div>
+              <span class="font-sans font-bold text-[9px] text-black tracking-tighter leading-none pr-1">Windows 95</span>
+            </div>
+          </div>
+          <span class="text-[10px] font-mono text-neutral-500">Win95 Outset</span>
+        </div>
+
+        <!-- Showcase Button 3 -->
+        <div class="flex flex-col items-center gap-2 group">
+          <div class="relative p-1 bg-neutral-900 rounded border border-neutral-800 transition-all group-hover:border-neutral-700">
+            <div class="w-[88px] h-[31px] bg-black border border-neutral-800 relative overflow-hidden select-none flex items-center justify-center">
+              <!-- Grid background -->
+              <div class="absolute inset-0 opacity-30" style="background-image: linear-gradient(to right, #333 1px, transparent 1px), linear-gradient(to bottom, #333 1px, transparent 1px); background-size: 4px 4px;"></div>
+              <span class="font-['Press_Start_2P'] text-[6px] text-emerald-500 relative z-10 tracking-tighter uppercase">ONLINE</span>
+            </div>
+          </div>
+          <span class="text-[10px] font-mono text-neutral-500">Retro Grid</span>
+        </div>
+
+        <!-- Showcase Button 4 -->
+        <div class="flex flex-col items-center gap-2 group">
+          <div class="relative p-1 bg-neutral-900 rounded border border-neutral-800 transition-all group-hover:border-neutral-700">
+            <div class="w-[88px] h-[31px] bg-indigo-950 border border-indigo-700 relative overflow-hidden select-none flex items-center justify-center">
+              <div class="absolute top-0 left-0 w-full h-[50%] bg-white/10 rounded-b-[4px]"></div>
+              <span class="font-['Silkscreen'] font-bold text-[8px] text-white relative z-10 drop-shadow-md">WEB3.0? NO</span>
+            </div>
+          </div>
+          <span class="text-[10px] font-mono text-neutral-500">Glossy Badge</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competitor Weakness & Comparison Section -->
+  <section class="py-16 border-t border-neutral-900">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold tracking-tight text-white mb-4">Why OneStopSite is Better</h2>
+        <p class="text-lg text-neutral-300 max-w-2xl mx-auto">
+          We analyzed standard tools like Lynn's Button Maker and identified major weaknesses. Here is how we engineered the ultimate editor.
+        </p>
+      </div>
+      
+      <!-- Comparison Table -->
+      <div class="overflow-x-auto rounded-lg border border-neutral-900 bg-neutral-950/20">
+        <table class="w-full border-collapse text-left text-base">
+          <thead>
+            <tr class="border-b border-neutral-900 bg-neutral-950">
+              <th class="p-4 font-semibold text-neutral-200">Feature</th>
+              <th class="p-4 font-semibold text-rose-400">Typical Makers</th>
+              <th class="p-4 font-semibold text-emerald-400">OneStopSite</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-neutral-900 text-[15px]">
+            <tr>
+              <td class="p-4 font-semibold text-white">Rendering Engine</td>
+              <td class="p-4 text-neutral-400">Blurry DOM-to-image capture (`html2canvas`)</td>
+              <td class="p-4 text-neutral-200 font-medium">Pixel-perfect client HTML5 Canvas</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-white">Animation Capabilities</td>
+              <td class="p-4 text-neutral-400">Static PNGs only (no GIF support)</td>
+              <td class="p-4 text-neutral-200 font-medium">Multi-frame GIF animation timeline</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-white">Layering System</td>
+              <td class="p-4 text-neutral-400">Flat, non-editable DOM stack</td>
+              <td class="p-4 text-neutral-200 font-medium">Photoshop-like draggable layer list</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-white">Text Customization</td>
+              <td class="p-4 text-neutral-400">Single text input, click Submit to preview</td>
+              <td class="p-4 text-neutral-200 font-medium">Multiple text layers, live typing, stroke outlines, custom shadows</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-white">Project Saves</td>
+              <td class="p-4 text-neutral-400">Lose progress on refresh</td>
+              <td class="p-4 text-neutral-200 font-medium">Export/Import JSON templates, browser Auto-save</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-semibold text-white">High-DPI Support</td>
+              <td class="p-4 text-neutral-400">Fixed 88x31 size only (looks blurry on modern monitors)</td>
+              <td class="p-4 text-neutral-200 font-medium">Export up to 8x resolution (crisp pixel upscale)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Presets Section -->
+  <section class="py-16 border-t border-neutral-900">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col sm:flex-row items-baseline justify-between mb-12 gap-4">
+        <div>
+          <h2 class="text-4xl font-bold tracking-tight text-white mb-2">Featured Templates</h2>
+          <p class="text-lg text-neutral-300">Select a preset to load into the workspace and remix.</p>
+        </div>
+        <a href="/templates" class="text-base font-semibold text-neutral-300 hover:text-white transition-colors">
+          View all templates &rarr;
+        </a>
+      </div>
+
+      <!-- Presets Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Preset 1 -->
+        <div class="group border border-neutral-900 bg-neutral-950/20 rounded-xl p-5 hover:border-neutral-800 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-[88px] h-[31px] bg-black border border-neutral-700 relative overflow-hidden select-none flex items-center justify-center mb-6 self-start">
+              <div class="absolute inset-0 bg-gradient-to-r from-red-900/40 to-blue-900/40"></div>
+              <span class="font-['Silkscreen'] text-[8px] text-white z-10 tracking-widest">CYBERPUNK</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Retro Cyber</h3>
+            <p class="text-base text-neutral-300 mb-6">A futuristic digital design with grid lines, neon text, and retro-futurism overlay.</p>
+          </div>
+          <a 
+            href="/editor?preset=cyberpunk" 
+            class="inline-flex items-center justify-center rounded-md bg-neutral-900 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-neutral-800"
+          >
+            Remix Template
+          </a>
+        </div>
+
+        <!-- Preset 2 -->
+        <div class="group border border-neutral-900 bg-neutral-950/20 rounded-xl p-5 hover:border-neutral-800 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-[88px] h-[31px] bg-neutral-200 border-2 border-neutral-400 relative overflow-hidden select-none flex items-center justify-between px-1.5 mb-6 self-start" style="border-style: outset;">
+              <span class="font-mono text-[8px] text-neutral-800 font-bold border border-neutral-400 px-1 py-0.5 bg-neutral-300">HTML</span>
+              <span class="font-sans font-bold text-[8px] text-black pr-1 tracking-tight">Windows 95</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Classic 1995</h3>
+            <p class="text-base text-neutral-300 mb-6">Emulate the vintage GUI styling of early Windows desktops. Solid gray outset borders, monospace font.</p>
+          </div>
+          <a 
+            href="/editor?preset=win95" 
+            class="inline-flex items-center justify-center rounded-md bg-neutral-900 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-neutral-800"
+          >
+            Remix Template
+          </a>
+        </div>
+
+        <!-- Preset 3 -->
+        <div class="group border border-neutral-900 bg-neutral-950/20 rounded-xl p-5 hover:border-neutral-800 transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-[88px] h-[31px] bg-black border border-neutral-800 relative overflow-hidden select-none flex items-center justify-center mb-6 self-start">
+              <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(0deg, #fff, #fff 1px, transparent 1px, transparent 3px);"></div>
+              <span class="font-['Press_Start_2P'] text-[6px] text-red-500 font-bold uppercase animate-pulse">UNDER CONST.</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">GeoCities Construction</h3>
+            <p class="text-base text-neutral-300 mb-6">The quintessential Web 1.0 badge. Flashing yellow/red texts and diagonal warning scanlines.</p>
+          </div>
+          <a 
+            href="/editor?preset=construction" 
+            class="inline-flex items-center justify-center rounded-md bg-neutral-900 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-neutral-800"
+          >
+            Remix Template
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educational/SEO Content Section -->
+  <section class="py-16 border-t border-neutral-900">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-4xl font-bold tracking-tight text-white mb-6">The Nostalgic Revival: 88x31 Buttons and Retro Web Aesthetics</h2>
+      <div class="space-y-6 text-neutral-300 leading-relaxed text-base">
+        <p>
+          In the early days of the web (late 1990s and early 2000s), personal websites, blogs, and link directories on hosting services like GeoCities, Angelfire, and Tripod used tiny standard-sized banner images to link to each other. The standard dimensions were <strong class="text-neutral-200">88 pixels wide by 31 pixels tall</strong>.
+        </p>
+        <p>
+          These buttons were also known as "badges", "steely buttons", or "link buttons." They were usually designed using pixel art, featuring animations (blinking lights, sliding banners, text scrolls) to grab attention. Netscape, Internet Explorer, and early web standards buttons (like "CSS Valid" and "Made with Notepad") popularized this exact format.
+        </p>
+        
+        <h3 class="text-2xl font-bold text-white tracking-tight mt-8">The Ultimate 88x31 Button Editor for Modern Creators</h3>
+        <p>
+          If you are building a personal corner on the internet, using a dedicated <strong class="text-neutral-200">88x31 button editor</strong> is the best way to craft custom badges without relying on complicated design suites. Our builder bridges the gap between classic low-resolution aesthetics and Figma-like vector workflows. Whether you want to showcase your favorite operating system, signal your allegiance to a particular web browser, or exchange links with friends on the modern <strong class="text-neutral-200">indie web</strong>, this canvas-based creator gives you pixel-perfect results in seconds. You can start with a blank screen or choose from predefined templates to build badges that align with your digital space.
+        </p>
+
+        <h3 class="text-2xl font-bold text-white tracking-tight mt-8">Perfect for Neocities Templates & Personal Spaces</h3>
+        <p>
+          A huge part of the personal web revival is centered around platforms like <strong class="text-neutral-200">neocities</strong>, where developers build creative, custom websites from scratch. Incorporating vintage buttons into your <strong class="text-neutral-200">neocities templates</strong> adds a layer of authenticity that is difficult to replicate with modern flat UI graphics. Retro buttons are visual handshakes of the web; displaying them in a widget sidebar or a dedicated link-exchange directory signals that your site is part of a wider, decentralized neighborhood. By using our tool to generate custom buttons, you can fit your neocities template with icons that perfectly match its theme.
+        </p>
+
+        <h3 class="text-2xl font-bold text-white tracking-tight mt-8">Design Custom Neocities Blinkies & Retro Graphics</h3>
+        <p>
+          No retro page layout is complete without <strong class="text-neutral-200">neocities blinkies</strong>. These tiny, sparkling graphic banners represent interests, web standards, and personal expressions. By combining layers, customized letter spacing, and timing delays in our timeline editor, you can create blinking texts, cycling color states, and sparkling star animations. The timeline animator works similarly to traditional keyframe editors, letting you define unique overrides for each frame. This is a game-changer for building animated banners, warning stripes, and vintage sparkles that make your personal site feel alive and interactive.
+        </p>
+
+        <h3 class="text-2xl font-bold text-white tracking-tight mt-8">Rebuilding Geocities Websites and Digital Heritage</h3>
+        <p>
+          When you look at an original <strong class="text-neutral-200">geocities website</strong>, the first things you notice are pixelated font styles, scrolling marquees, and flashing icons. Early web development lacked clean modern layouts, relying instead on raw creativity and micro-graphics. Today, digital archivists and retro enthusiasts are rebuilding these sites to preserve their history. A key component of any neocities or geocities layout is the collection of animated <strong class="text-neutral-200">geocities gifs</strong> and button banners. Our builder lets you load classic styles, customize coordinates, layer colors, and download high-contrast, sharp files that integrate seamlessly into your retro design.
+        </p>
+
+        <h3 class="text-2xl font-bold text-white tracking-tight mt-8">Indie Web Design: The Philosophy of Decentralization</h3>
+        <p>
+          Modern web layout styling often feels uniform and sterile, with big tech platforms dictating layout structures. In response, the <strong class="text-neutral-200">indie web design</strong> movement advocates for owning your data and expressing your individuality. Creating a personal layout, hosting it, and linking to other web builders using customized badges is an act of digital independence. Our 88x31 button editor makes it easy for developers of all skill levels to design icons that fit this philosophy, offering nearest-neighbor pixel resizing to ensure that small graphics remain sharp on high-definition modern screens.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visible FAQ Section -->
+  <section class="py-16 border-t border-neutral-900">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-4xl font-bold tracking-tight text-white mb-10">88x31 Button Editor - Frequently Asked Questions</h2>
+      
+      <div class="space-y-4">
+        <!-- FAQ Item 1 -->
+        <div class="border-b border-neutral-900 pb-2">
+          <button class="faq-toggle w-full flex justify-between items-center text-left py-4 text-lg font-bold text-white hover:text-emerald-400 transition-colors focus:outline-none cursor-pointer">
+            <span>How to make 88x31 buttons online?</span>
+            <span class="faq-icon text-neutral-500 font-mono text-xl transition-transform duration-300 select-none">+</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="text-base text-neutral-300 pb-4 leading-relaxed">
+              To make 88x31 buttons online, use an interactive canvas builder like the OneStopSite 88x31 button editor. You can design custom backgrounds (solid fill, gradients, or custom uploaded images), place vector shapes (rectangles, circles, stars, polygons), and type text with pixel fonts, outline strokes, and drop shadows. Once complete, export your creation as a crisp PNG or an animated GIF.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="border-b border-neutral-900 pb-2">
+          <button class="faq-toggle w-full flex justify-between items-center text-left py-4 text-lg font-bold text-white hover:text-emerald-400 transition-colors focus:outline-none cursor-pointer">
+            <span>How to make a site button for Neocities?</span>
+            <span class="faq-icon text-neutral-500 font-mono text-xl transition-transform duration-300 select-none">+</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="text-base text-neutral-300 pb-4 leading-relaxed">
+              To make a site button for Neocities, open the OneStopSite studio, load a classic template like the Windows 95 or Cyberpunk preset, customize the text to display your website name, and drop in built-in assets. Export the file as a PNG or GIF, upload it to your Neocities site folder, and share the HTML exchange code snippet with other webmasters.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="border-b border-neutral-900 pb-2">
+          <button class="faq-toggle w-full flex justify-between items-center text-left py-4 text-lg font-bold text-white hover:text-emerald-400 transition-colors focus:outline-none cursor-pointer">
+            <span>What are the exact dimensions of standard web badges?</span>
+            <span class="faq-icon text-neutral-500 font-mono text-xl transition-transform duration-300 select-none">+</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="text-base text-neutral-300 pb-4 leading-relaxed">
+              Standard vintage web badges are exactly 88 pixels wide by 31 pixels tall (often referred to as 88x31 buttons). Other popular retro formats include 150x80 banners, 468x60 full banners, and 120x60 badges. The 88x31 canvas remains the absolute standard size for link directories and personal button exchanges.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="border-b border-neutral-900 pb-2">
+          <button class="faq-toggle w-full flex justify-between items-center text-left py-4 text-lg font-bold text-white hover:text-emerald-400 transition-colors focus:outline-none cursor-pointer">
+            <span>Can I create animated GIF buttons with this editor?</span>
+            <span class="faq-icon text-neutral-500 font-mono text-xl transition-transform duration-300 select-none">+</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="text-base text-neutral-300 pb-4 leading-relaxed">
+              Yes, this 88x31 button editor includes a frame timeline animator. You can add multiple keyframes, customize the delays (in milliseconds), and define layer overrides (like coordinates, opacity, colors, or text) per frame. When you click Export GIF, it compiles the frames into a pixel-perfect, loopable animated GIF.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="border-b border-neutral-900 pb-2">
+          <button class="faq-toggle w-full flex justify-between items-center text-left py-4 text-lg font-bold text-white hover:text-emerald-400 transition-colors focus:outline-none cursor-pointer">
+            <span>How do I add an 88x31 button to my website?</span>
+            <span class="faq-icon text-neutral-500 font-mono text-xl transition-transform duration-300 select-none">+</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="text-base text-neutral-300 pb-4 leading-relaxed">
+              Once you export your button, upload it to your hosting directory. Then, copy and paste a standard HTML link exchange markup on your site: 
+              <code class="block bg-neutral-950 p-3 rounded-md border border-neutral-900 text-emerald-400 font-mono text-xs mt-2 select-all">&lt;a href="https://yoursite.com" target="_blank"&gt;&lt;img src="/button.png" width="88" height="31" alt="My Website"&gt;&lt;/a&gt;</code>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 6 -->
+        <div class="border-b border-neutral-900 pb-2">
+          <button class="faq-toggle w-full flex justify-between items-center text-left py-4 text-lg font-bold text-white hover:text-emerald-400 transition-colors focus:outline-none cursor-pointer">
+            <span>What is a Neocities blinkie and how do I design one?</span>
+            <span class="faq-icon text-neutral-500 font-mono text-xl transition-transform duration-300 select-none">+</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="text-base text-neutral-300 pb-4 leading-relaxed">
+              A blinkie is a tiny animated banner (usually featuring sparkling elements and animated text) used to express interests or web standards. You can design one in our editor by placing star/sparkle shapes or using pixel typography, adding a color shift or coordinate nudge in a second timeline frame, and exporting the animated output.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 7 -->
+        <div class="border-b border-neutral-900 pb-2">
+          <button class="faq-toggle w-full flex justify-between items-center text-left py-4 text-lg font-bold text-white hover:text-emerald-400 transition-colors focus:outline-none cursor-pointer">
+            <span>Is this 88x31 button editor free to use?</span>
+            <span class="faq-icon text-neutral-500 font-mono text-xl transition-transform duration-300 select-none">+</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="text-base text-neutral-300 pb-4 leading-relaxed">
+              Yes, OneStopSite is 100% free, open-source, and does not require registration or credit cards. The entire editor runs client-side inside your browser, meaning your templates and designs are private, secure, and load instantly.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 8 -->
+        <div class="border-b border-neutral-900 pb-2">
+          <button class="faq-toggle w-full flex justify-between items-center text-left py-4 text-lg font-bold text-white hover:text-emerald-400 transition-colors focus:outline-none cursor-pointer">
+            <span>Do I need to sign up or upload my projects to a database?</span>
+            <span class="faq-icon text-neutral-500 font-mono text-xl transition-transform duration-300 select-none">+</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="text-base text-neutral-300 pb-4 leading-relaxed">
+              No, you do not need to register. You can save your progress directly to your browser's local cache using the auto-save feature, or export your layout as a standard JSON project file to resume editing later from any machine.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 9 -->
+        <div class="border-b border-neutral-900 pb-2">
+          <button class="faq-toggle w-full flex justify-between items-center text-left py-4 text-lg font-bold text-white hover:text-emerald-400 transition-colors focus:outline-none cursor-pointer">
+            <span>Can I use custom font families, shadows, and pixel borders?</span>
+            <span class="faq-icon text-neutral-500 font-mono text-xl transition-transform duration-300 select-none">+</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="text-base text-neutral-300 pb-4 leading-relaxed">
+              Yes, the editor supports Google Fonts tailored for retro typography (including Press Start 2P, Silkscreen, Pixelify Sans, and VT323). You can also apply stroke outline width and color, text drop shadows, glow effects, bevel boundaries, and pixel noise grain overlays.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 10 -->
+        <div class="border-b border-neutral-900 pb-2">
+          <button class="faq-toggle w-full flex justify-between items-center text-left py-4 text-lg font-bold text-white hover:text-emerald-400 transition-colors focus:outline-none cursor-pointer">
+            <span>What is the difference between retro link badges and modern banners?</span>
+            <span class="faq-icon text-neutral-500 font-mono text-xl transition-transform duration-300 select-none">+</span>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <p class="text-base text-neutral-300 pb-4 leading-relaxed">
+              Retro link badges are optimized at a tiny 88x31 pixel size to minimize page load speeds and keep layouts uniform. Modern banners are larger and designed for high-resolution graphics, whereas 88x31 buttons maintain the classic, lightweight, pixel-perfect feel of early webrings and the indie web.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Accordion Handler Script -->
+  <script is:inline>
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('.faq-icon');
+        const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+        // Toggle current FAQ
+        if (!isOpen) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          if (icon) icon.style.transform = 'rotate(45deg)';
+        } else {
+          answer.style.maxHeight = '0px';
+          if (icon) icon.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+  </script>
+
+  <!-- JSON-LD FAQPage Schema -->
+  <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How to make 88x31 buttons online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To make 88x31 buttons online, use an interactive canvas builder like the OneStopSite 88x31 button editor. You can design custom backgrounds (solid fill, gradients, or custom uploaded images), place vector shapes (rectangles, circles, stars, polygons), and type text with pixel fonts, outline strokes, and drop shadows. Once complete, export your creation as a crisp PNG or an animated GIF."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to make a site button for Neocities?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To make a site button for Neocities, open the OneStopSite studio, load a classic template like the Windows 95 or Cyberpunk preset, customize the text to display your website name, and drop in built-in assets. Export the file as a PNG or GIF, upload it to your Neocities site folder, and share the HTML exchange code snippet with other webmasters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the exact dimensions of standard web badges?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard vintage web badges are exactly 88 pixels wide by 31 pixels tall (often referred to as 88x31 buttons). Other popular retro formats include 150x80 banners, 468x60 full banners, and 120x60 badges. The 88x31 canvas remains the absolute standard size for link directories and personal button exchanges."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I create animated GIF buttons with this editor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this 88x31 button editor includes a frame timeline animator. You can add multiple keyframes, customize the delays (in milliseconds), and define layer overrides (like coordinates, opacity, colors, or text) per frame. When you click Export GIF, it compiles the frames into a pixel-perfect, loopable animated GIF."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I add an 88x31 button to my website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Once you export your button, upload it to your hosting directory. Then, copy and paste a standard HTML link exchange markup on your site: <a href=\"https://yoursite.com\" target=\"_blank\"><img src=\"/button.png\" width=\"88\" height=\"31\" alt=\"My Website\"></a>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Neocities blinkie and how do I design one?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A blinkie is a tiny animated banner (usually featuring sparkling elements and animated text) used to express interests or web standards. You can design one in our editor by placing star/sparkle shapes or using pixel typography, adding a color shift or coordinate nudge in a second timeline frame, and exporting the animated output."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this 88x31 button editor free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, OneStopSite is 100% free, open-source, and does not require registration or credit cards. The entire editor runs client-side inside your browser, meaning your templates and designs are private, secure, and load instantly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to sign up or upload my projects to a database?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, you do not need to register. You can save your progress directly to your browser's local cache using the auto-save feature, or export your layout as a standard JSON project file to resume editing later from any machine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use custom font families, shadows, and pixel borders?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the editor supports Google Fonts tailored for retro typography (including Press Start 2P, Silkscreen, Pixelify Sans, and VT323). You can also apply stroke outline width and color, text drop shadows, glow effects, bevel boundaries, and pixel noise grain overlays."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between retro link badges and modern banners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Retro link badges are optimized at a tiny 88x31 pixel size to minimize page load speeds and keep layouts uniform. Modern banners are larger and designed for high-resolution graphics, whereas 88x31 buttons maintain the classic, lightweight, pixel-perfect feel of early webrings and the indie web."
+          }
+        }
+      ]
+    }
+  </script>
+</Layout>

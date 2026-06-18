@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Page Not Found (404) | OneStopSite 88x31 Button Maker"
+  description="The page you are looking for does not exist. Return to OneStopSite to design retro 88x31 buttons."
+>
+  <div class="max-w-md mx-auto py-16 px-4 text-center">
+    <!-- Visual 404 Badge -->
+    <div class="inline-flex items-center justify-center mb-8 relative">
+      <div class="absolute inset-0 bg-rose-500/20 rounded-full blur-2xl animate-pulse"></div>
+      
+      <!-- Simulated glitched 88x31 error badge -->
+      <div class="w-[176px] h-[62px] bg-black border-2 border-rose-900 rounded relative overflow-hidden select-none flex flex-col items-center justify-center shadow-2xl" style="image-rendering: pixelated;">
+        <div class="absolute inset-0 bg-linear-to-b from-rose-950/40 to-black/80"></div>
+        <!-- Scanlines -->
+        <div class="absolute inset-0 opacity-20 pointer-events-none" style="background: repeating-linear-gradient(0deg, #f43f5e, #f43f5e 1px, transparent 1px, transparent 3px);"></div>
+        <!-- Glitch Grid -->
+        <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(to right, #f43f5e 1px, transparent 1px), linear-gradient(to bottom, #f43f5e 1px, transparent 1px); background-size: 8px 8px;"></div>
+        
+        <span class="font-['Press_Start_2P'] text-lg text-rose-500 relative z-10 font-bold tracking-tight drop-shadow-[0_2px_0_rgba(0,0,0,0.9)] animate-pulse">404</span>
+        <span class="font-['Silkscreen'] text-[8px] text-rose-300 relative z-10 font-bold tracking-widest mt-1 uppercase">SYSTEM ERROR</span>
+      </div>
+    </div>
+
+    <!-- Error Messaging -->
+    <h1 class="text-3xl sm:text-4xl font-black text-white mb-4 tracking-tight font-sans">
+      Page Not Found
+    </h1>
+    <p class="text-neutral-300 text-base leading-relaxed mb-10 max-w-sm mx-auto">
+      The coordinates you navigated to do not exist in our web directory. It looks like this page was lost in the vintage web.
+    </p>
+
+    <!-- Navigation Options -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a 
+        href="/" 
+        class="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-white px-5 py-3 text-sm font-semibold text-black transition-all hover:bg-neutral-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-lg"
+      >
+        Return Home
+      </a>
+      <a 
+        href="/editor" 
+        class="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border border-neutral-800 bg-neutral-950 px-5 py-3 text-sm font-semibold text-neutral-300 transition-all hover:bg-neutral-900 hover:text-white hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+      >
+        Launch Maker
+      </a>
+    </div>
+  </div>
+</Layout>

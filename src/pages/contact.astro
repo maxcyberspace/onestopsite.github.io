@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Contact Us | OneStopSite 88x31 Button Maker"
+  description="Have feedback, template submissions, or feature requests? Contact the OneStopSite retro web badge creator team directly."
+>
+  <div class="max-w-2xl mx-auto pt-0 pb-12 px-4">
+    <!-- Centered Header -->
+    <div class="text-center mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-950 text-xs text-emerald-400 mb-4 font-mono select-none">
+        <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>GET IN TOUCH</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-black text-white mb-4 tracking-tight font-sans">Contact Us</h1>
+      <p class="text-neutral-300 text-lg leading-relaxed max-w-xl mx-auto">
+        Have feedback, template suggestions, or feature requests for our retro button editor? Drop us a message below.
+      </p>
+    </div>
+
+    <!-- Centered Form Container -->
+    <div class="border border-neutral-800 bg-neutral-900/50 rounded-2xl p-6 sm:p-10 backdrop-blur-md shadow-2xl">
+      <form 
+        action="https://formspree.io/maxwrites02@gmail.com" 
+        method="POST" 
+        id="contact-form" 
+        class="space-y-6"
+      >
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label for="name" class="block text-xs font-mono uppercase text-neutral-400 mb-2">Your Name</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required
+              placeholder="e.g. Neo Webmaster" 
+              class="w-full rounded-lg border border-neutral-800 bg-neutral-950 px-4 py-3.5 text-sm text-white placeholder-neutral-600 outline-none transition-all focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-xs font-mono uppercase text-neutral-400 mb-2">
+              Email Address <span class="text-neutral-600 lowercase text-[10px]">(optional)</span>
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="e.g. neo@neocities.org" 
+              class="w-full rounded-lg border border-neutral-800 bg-neutral-950 px-4 py-3.5 text-sm text-white placeholder-neutral-600 outline-none transition-all focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="subject" class="block text-xs font-mono uppercase text-neutral-400 mb-2">Subject</label>
+          <input 
+            type="text" 
+            id="subject" 
+            name="subject" 
+            required
+            placeholder="e.g. Feature Request: Outline Customization" 
+            class="w-full rounded-lg border border-neutral-800 bg-neutral-950 px-4 py-3.5 text-sm text-white placeholder-neutral-600 outline-none transition-all focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+          />
+        </div>
+
+        <div>
+          <label for="message" class="block text-xs font-mono uppercase text-neutral-400 mb-2">Message</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="6"
+            required
+            placeholder="Type your feedback, bug report, or template suggestion here..." 
+            class="w-full rounded-lg border border-neutral-800 bg-neutral-950 px-4 py-3.5 text-sm text-white placeholder-neutral-600 outline-none transition-all focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 resize-none"
+          ></textarea>
+        </div>
+
+        <button 
+          type="submit" 
+          class="w-full inline-flex items-center justify-center rounded-lg bg-white px-5 py-4 text-sm font-semibold text-black transition-all hover:bg-neutral-200 hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
+        >
+          Send Message
+        </button>
+      </form>
+
+      <!-- Status Message Placeholder -->
+      <div id="form-status" class="hidden mt-6 p-4 rounded-lg border text-sm text-center font-medium"></div>
+    </div>
+  </div>
+
+  <script is:inline>
+    const form = document.getElementById('contact-form');
+    const statusDiv = document.getElementById('form-status');
+
+    if (form && statusDiv) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending...';
+        }
+
+        statusDiv.classList.add('hidden');
+        statusDiv.className = 'mt-6 p-4 rounded-lg border text-sm text-center font-medium';
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            statusDiv.classList.remove('hidden');
+            statusDiv.classList.add('bg-emerald-950/40', 'border-emerald-900', 'text-emerald-400');
+            statusDiv.textContent = 'Thank you! Your message has been sent successfully.';
+            form.reset();
+          } else {
+            const data = await response.json();
+            throw new Error(data.error || 'Oops! There was a problem submitting your form.');
+          }
+        } catch (error) {
+          statusDiv.classList.remove('hidden');
+          statusDiv.classList.add('bg-rose-950/40', 'border-rose-900', 'text-rose-400');
+          statusDiv.textContent = error.message || 'Something went wrong. Please check your network and try again.';
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+          }
+        }
+      });
+    }
+  </script>
+</Layout>

@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const buttons = [
+  {
+    name: "Neocities Member",
+    category: "Community",
+    style: "background: linear-gradient(135deg, #e056fd 0%, #be2edd 100%);",
+    html: '<div class="w-full h-full flex items-center justify-center relative"><div class="absolute top-0 left-0 w-full h-[50%] bg-white/10 rounded-b-[4px]"></div><span class="font-[\'Silkscreen\'] font-bold text-[8px] text-white tracking-tighter drop-shadow-md">NEOCITIES</span></div>',
+    code: '<a href="https://neocities.org" target="_blank"><img src="https://onestopsite.com/gallery/neocities.gif" width="88" height="31" alt="Neocities Member"></a>'
+  },
+  {
+    name: "Valid HTML5",
+    category: "Standards",
+    style: "background: #e34f26; border-left: 4px solid #f06529;",
+    html: '<div class="w-full h-full flex items-center justify-between px-1.5 font-mono text-[9px] text-white font-bold tracking-tighter"><span>HTML5</span><span class="text-neutral-200">✓</span></div>',
+    code: '<a href="https://w3.org" target="_blank"><img src="https://onestopsite.com/gallery/html5.png" width="88" height="31" alt="Valid HTML5"></a>'
+  },
+  {
+    name: "Made with Notepad",
+    category: "Tools",
+    style: "background: #ffffff; border: 1px solid #000000;",
+    html: '<div class="w-full h-full flex items-center justify-center font-mono text-[7px] text-black font-black font-sans leading-none tracking-tighter">MADE WITH NOTEPAD</div>',
+    code: '<a href="https://onestopsite.com" target="_blank"><img src="https://onestopsite.com/gallery/notepad.png" width="88" height="31" alt="Made with Notepad"></a>'
+  },
+  {
+    name: "Best Viewed in Netscape",
+    category: "Browser Wars",
+    style: "background: #000055; border: 2px solid; border-color: #000088 #000022 #000022 #000088;",
+    html: '<div class="w-full h-full flex items-center justify-between px-1 text-[8px] font-bold text-white font-sans"><span class="bg-blue-600 px-0.5 text-[7px] rounded-xs font-mono">N</span><span class="tracking-tighter">NETSCAPE</span></div>',
+    code: '<a href="https://onestopsite.com" target="_blank"><img src="https://onestopsite.com/gallery/netscape.gif" width="88" height="31" alt="Best Viewed in Netscape"></a>'
+  },
+  {
+    name: "Geek Powered",
+    category: "Vibe",
+    style: "background: #000000; border: 1px solid #00ff00;",
+    html: '<div class="w-full h-full flex items-center justify-center relative overflow-hidden"><div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(90deg, #0f0, #0f0 1px, transparent 1px, transparent 4px);"></div><span class="font-[\'Press_Start_2P\'] text-[6px] text-[#00ff00] drop-shadow-[0_0_1px_#00ff00]">GEEK POWER</span></div>',
+    code: '<a href="https://onestopsite.com" target="_blank"><img src="https://onestopsite.com/gallery/geek.png" width="88" height="31" alt="Geek Powered"></a>'
+  },
+  {
+    name: "Firefox Fan",
+    category: "Browser Wars",
+    style: "background: linear-gradient(180deg, #ff9f43 0%, #ee5253 100%);",
+    html: '<div class="w-full h-full flex items-center justify-center"><span class="font-[\'Silkscreen\'] text-[8px] text-white tracking-widest drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">FIREFOX</span></div>',
+    code: '<a href="https://mozilla.org/firefox" target="_blank"><img src="https://onestopsite.com/gallery/firefox.gif" width="88" height="31" alt="Get Firefox"></a>'
+  }
+];
+---
+
+<Layout 
+  title="88x31 Button Gallery & Retro Badge Collection | OneStopSite"
+  description="Explore a collection of retro 88x31 badges. Get HTML code snippets for Netscape, Neocities, HTML5, and Notepad badges to add directly to your personal site."
+>
+  <div class="pt-0 pb-6">
+    <div class="border-b border-neutral-900 pb-6 mb-10">
+      <div class="text-xs text-neutral-500 font-mono uppercase tracking-wider mb-2">Retro Archives</div>
+      <h1 class="text-4xl font-black text-white tracking-tight">88x31 Button Gallery</h1>
+      <p class="text-neutral-400 mt-2">A nostalgic library of classic badges. Copy the HTML code for your sidebar or load them as projects in the editor.</p>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {buttons.map((btn) => (
+        <div class="flex flex-col sm:flex-row items-center gap-6 rounded-xl border border-neutral-900 bg-neutral-950/20 p-5 hover:border-neutral-800 transition-all">
+          <!-- Button Preview -->
+          <div class="flex flex-col items-center gap-2 flex-shrink-0">
+            <div class="flex items-center justify-center rounded-lg border border-neutral-900 bg-black/60 h-20 w-32">
+              <div 
+                class="w-[88px] h-[31px] relative overflow-hidden flex items-center justify-center shadow-lg" 
+                style={btn.style}
+                set:html={btn.html}
+              />
+            </div>
+            <span class="font-mono text-[9px] uppercase text-neutral-500 tracking-widest">{btn.category}</span>
+          </div>
+
+          <!-- Description and Copy Code -->
+          <div class="flex-grow w-full space-y-3">
+            <div class="flex items-baseline justify-between">
+              <h2 class="text-lg font-bold text-white leading-none">{btn.name}</h2>
+              <button 
+                onclick={`
+                  const presetMapping = {
+                    'Neocities Member': 'glass',
+                    'Valid HTML5': 'minimalist',
+                    'Made with Notepad': 'minimalist',
+                    'Best Viewed in Netscape': 'win95',
+                    'Geek Powered': 'cyberpunk',
+                    'Firefox Fan': 'glass'
+                  };
+                  window.location.href = '/editor?preset=' + (presetMapping['${btn.name}'] || 'win95');
+                `}
+                class="text-[10px] font-semibold text-neutral-400 hover:text-white transition-colors"
+              >
+                Edit Design &rarr;
+              </button>
+            </div>
+
+            <!-- Code copy input -->
+            <div class="relative flex items-center bg-black border border-neutral-800 rounded px-3 py-2">
+              <input 
+                type="text" 
+                readonly 
+                value={btn.code} 
+                id={`code-${btn.name.replace(/\s+/g, '-').toLowerCase()}`}
+                class="font-mono text-[10px] text-neutral-400 bg-transparent outline-hidden w-full select-all" 
+              />
+              <button 
+                onclick={`
+                  const el = document.getElementById('code-${btn.name.replace(/\s+/g, '-').toLowerCase()}');
+                  el.select();
+                  document.execCommand('copy');
+                  const btn = this;
+                  btn.textContent = 'COPIED';
+                  setTimeout(() => btn.textContent = 'COPY', 1500);
+                `}
+                class="ml-2 font-mono text-[9px] font-bold text-neutral-300 hover:text-white transition-colors border border-neutral-800 hover:border-neutral-700 bg-neutral-950 px-1.5 py-0.5 rounded cursor-pointer"
+              >
+                COPY
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>
